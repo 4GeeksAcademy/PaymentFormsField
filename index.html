@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <script src="https://kit.fontawesome.com/ae7daec06f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            border: 1px solid #d3cccc;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .message-box {
+            float: right;
+            width: 50%;
+        }
+        .left-aligned-heading {
+            text-align: left;
+        }
+
+        .light-gray {
+         background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container rounded">
+                <!-- First Div Container with Title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="left-aligned-heading" style="background-color:white;">Payment Form Example</h3>
+                        </div>
+                    </div>
+                
+                <!-- Notification -->
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="left-aligned-heading" style="background-color: #ebc7c7; border-radius: 00px;">Some fields are missing</p>
+                        </div>
+                    </div>
+                <!-- Second Div Container with Form Fields -->
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="card-number">Card #:</label>
+                        <input type="text" id="card-number" name="card-number" class="form-control" required placeholder="XXXXXXXXXXXXXX">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="cvc">CVC #:</label>
+                        <input type="text" id="cvc" name="cvc" class="form-control" required placeholder="0000">
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="amount">Amount:</label>
+                        <div style="display: flex;">
+                            <span style="align-self: center; padding-right: 5px;">$</span>
+                            <input type="text" id="amount" name="amount" class="form-control" required placeholder="Amount">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="city">City:</label>
+                        <input type="text" id="city" name="city" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>We accept:</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="visa" name="card-type" value="visa" required>
+                                <label class="form-check-label" for="visa"><i class="fa-brands fa-cc-visa"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="discover" name="card-type" value="discover" required>
+                                <label class="form-check-label" for="discover"><i class="fa-brands fa-cc-discover"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="mastercard" name="card-type" value="mastercard" required>
+                                <label class="form-check-label" for="mastercard"><i class="fa-brands fa-cc-mastercard"></i></label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" id="mastercard" name="card-type" value="mastercard" required>
+                                <label class="form-check-label" for="mastercard"><i class="fa-brands fa-cc-amex"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div class="form-group col-md-6">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" name="last-name" class="form-control" required>
+                        </div>
+                    <div class="form-group col-md-4">
+                        <label for="state">State:</label>
+                        <select id="state" name="state" class="form-control" required>
+                            <option value="" selected>Pick State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="postal-code">Postal Code:</label>
+                        <input type="text" id="postal-code" name="postal-code" class="form-control" required>
+                    </div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" class="form-control" rows="3"></textarea>
+                        <p style="color: #8d8686;">Add any notes here</p>
+                    </div>
+                </div>
+             <!-- Buttons -->
+        <div class="container rounded" style="background-color: ##f2eded;">
+        <div class="row justify-content-end"> 
+            <div class="col-md-6" >
+                <div class="text-right">
+                    <button type="button" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
